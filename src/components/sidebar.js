@@ -19,33 +19,57 @@ class Sidebar extends Component {
 	 * @return {A list of sidebar accordion components}
 	 */
 	renderListItems() {
+		var count = 0;
 		return this.props.topics.map((topic) => {
+			count++;
 			return (
 				<SidebarAccordion
-					key={topic.name}
+					key={count}
 					name={topic.name}
 					selectTopic={(topic_name) => {console.log(topic_name)}}
-					topics={topic.sub_topics} />
+					topics={topic.topics} />
 			);
 		});
 	}
 
 	render() {
-		var default_menu_style = {height:'inherit', backgroundColor:'#fff'};
-		var default_menu_header_style = {
-			textAlign:'center',
-			backgroundColor:'#ddd',
-			color:'white !important',
+		var sidebar_style = {
+			boxShadow: '1px 1px 3px 1px #eee',
+			border:'1px solid #ddd'
 		}
 
-		return 	<div className='sidebar' style={this.props.style}>
-			<ul className='menu vertical' style={default_menu_style}>
-				<li className='menu-text menu-header' 
-					style={{backgroundColor:"#3B5A74 !important", fontWeight:'bolder', fontSize: '15px'}}>
-					{this.props.title}
-				</li>
-				{this.renderListItems()}
-			</ul>
+		var default_menu_style = {
+			height:'inherit', 
+			backgroundColor:'#fff'
+		}
+
+		var default_menu_header_style = { 
+			backgroundColor:"#3B5A74", 
+			fontWeight:'bolder', 
+			fontSize: '15px',
+			color:'white',
+			width:'inherit',
+			textAlign:'center',
+			padding: '25px',
+			borderRadius:'5px 5px 0px 0px'
+		}
+
+		return 	<div className='row'>
+			<div className='small-12 large-3 columns'>
+				<div className='sidebar' style={sidebar_style || this.props.style}>
+					<ul className='menu vertical' style={default_menu_style}>
+						<li className='menu-text menu-header' 
+							style={default_menu_header_style}>
+							{this.props.title}
+						</li>
+						{this.renderListItems()}
+					</ul>
+				</div>
+			</div>
 		</div>
+
+
 	}	
 }
+
+export default Sidebar;
