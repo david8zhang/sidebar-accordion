@@ -1,10 +1,6 @@
 # sidebar-accordion
 collapsing sidebar with categories implemented in ReactJS
 
-# Usage
-Pass in topics and a title, and inline styles. You can also pass in nested children
-to customize the sidebar options
-
 # Styles
 You must have Foundation 6 included as part of the project for this component to work!
 
@@ -17,6 +13,10 @@ Require it in your html
 <link rel="stylesheet" type="text/css" href="./style/css/foundation.css">
 <link rel="stylesheet" type="text/css" href="./style/css/foundation.min.css">
 ```
+
+# Usage
+Pass in topics and a title, and inline styles. You can also pass in nested children
+to customize the sidebar options
 
 ```
 var topics = [{
