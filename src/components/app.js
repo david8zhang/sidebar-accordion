@@ -26,13 +26,20 @@ class App extends Component {
 			}, {
 				name: 'Topic 3'
 			}]
-		}]
-		return <div>
-			<Sidebar topics={topics}
-					 selectTopic={(topic) => {console.log(topic)}}
-					 selected = {this.props.selectTopic}
-					 title='Sample Sidebar'/>
-		</div>
+		}];
+		return (
+			<div>
+				<Sidebar topics={topics}
+						 selectTopic={(topic) => {console.log(topic)}}
+						 title='Sample Sidebar'>
+					<h1>Hello World!</h1>
+				</Sidebar>
+				<br/>
+				<Sidebar topics={topics}
+						 selectTopic={(topic) => {console.log(topic)}}
+						 title='Sample Sidebar'/>
+			</div>
+		);
 	}
 }
 

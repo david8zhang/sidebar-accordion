@@ -38,6 +38,13 @@ class Sidebar extends Component {
 			border:'1px solid #ddd'
 		}
 
+		// Set the sidebar style to have the values of custom passed in styles
+		if(this.props.style) {
+			for (var key in style) {
+				sidebar_style[key] = style[key]
+			}
+		}
+
 		var default_menu_style = {
 			height:'inherit', 
 			backgroundColor:'#fff'
@@ -55,14 +62,14 @@ class Sidebar extends Component {
 		}
 
 		return 	<div className='row'>
-			<div className='small-12 large-3 columns'>
-				<div className='sidebar' style={sidebar_style || this.props.style}>
+			<div className='small-3 large-3 columns'>
+				<div className='sidebar' style={sidebar_style}>
 					<ul className='menu vertical' style={default_menu_style}>
 						<li className='menu-text menu-header' 
 							style={default_menu_header_style}>
 							{this.props.title}
 						</li>
-						{this.renderListItems()}
+						{this.props.children || this.renderListItems()}
 					</ul>
 				</div>
 			</div>

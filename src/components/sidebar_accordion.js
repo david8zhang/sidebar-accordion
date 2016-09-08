@@ -9,7 +9,6 @@ class SidebarAccordion extends Component {
     }
 
     renderListItems() {
-
         var count = 0;
         return this.props.topics.map((topic) => {
             count++;
@@ -24,10 +23,6 @@ class SidebarAccordion extends Component {
         });
     }
 
-    handleClick() {
-        this.setState({ active: !this.state.active });
-    }
-
 	render() {
         var menu_text = {
             textAlign:'center',
@@ -39,7 +34,7 @@ class SidebarAccordion extends Component {
         }
 		return (
 			<div style={this.props.accordion_style}>
-                <li onClick={this.handleClick.bind(this)}
+                <li onClick={() => {this.setState({ active: !this.state.active })}}
                     className='menu-text'
                     style={menu_text}>
                         <div className='menu-link'>{this.props.name}</div>
