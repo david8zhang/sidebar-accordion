@@ -97,7 +97,7 @@ var Sidebar = (function (_Component) {
 				{ className: 'row' },
 				_react2.default.createElement(
 					'div',
-					{ className: 'small-12 large-3 columns' },
+					{ className: 'small-3 large-3 columns' },
 					_react2.default.createElement(
 						'div',
 						{ className: 'sidebar', style: sidebar_style },
