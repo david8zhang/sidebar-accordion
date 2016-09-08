@@ -1,6 +1,6 @@
 {
   "name": "sidebar-accordion",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "collapsing sidebar with categories implemented in ReactJS",
   "main": "sidebar.js",
   "scripts": {

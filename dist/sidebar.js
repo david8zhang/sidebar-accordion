@@ -71,8 +71,8 @@ var Sidebar = (function (_Component) {
 
 			// Set the sidebar style to have the values of custom passed in styles
 			if (this.props.style) {
-				for (var key in style) {
-					sidebar_style[key] = style[key];
+				for (var key in this.props.style) {
+					sidebar_style[key] = this.props.style[key];
 				}
 			}
 
