@@ -61,21 +61,15 @@ class Sidebar extends Component {
 			borderRadius:'5px 5px 0px 0px'
 		}
 
-		return 	<div className='row'>
-			<div className='small-3 large-3 columns'>
-				<div className='sidebar' style={sidebar_style}>
-					<ul className='menu vertical' style={default_menu_style}>
-						<li className='menu-text menu-header' 
-							style={default_menu_header_style}>
-							{this.props.title}
-						</li>
-						{this.props.children || this.renderListItems()}
-					</ul>
-				</div>
-			</div>
+		return <div className='sidebar' style={sidebar_style}>
+			<ul className='menu vertical' style={default_menu_style}>
+				<li className='menu-text menu-header' 
+					style={default_menu_header_style}>
+					{this.props.title}
+				</li>
+				{this.props.children || this.renderListItems()}
+			</ul>
 		</div>
-
-
 	}	
 }
 

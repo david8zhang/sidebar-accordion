@@ -94,25 +94,17 @@ var Sidebar = (function (_Component) {
 
 			return _react2.default.createElement(
 				'div',
-				{ className: 'row' },
+				{ className: 'sidebar', style: sidebar_style },
 				_react2.default.createElement(
-					'div',
-					{ className: 'small-3 large-3 columns' },
+					'ul',
+					{ className: 'menu vertical', style: default_menu_style },
 					_react2.default.createElement(
-						'div',
-						{ className: 'sidebar', style: sidebar_style },
-						_react2.default.createElement(
-							'ul',
-							{ className: 'menu vertical', style: default_menu_style },
-							_react2.default.createElement(
-								'li',
-								{ className: 'menu-text menu-header',
-									style: default_menu_header_style },
-								this.props.title
-							),
-							this.props.children || this.renderListItems()
-						)
-					)
+						'li',
+						{ className: 'menu-text menu-header',
+							style: default_menu_header_style },
+						this.props.title
+					),
+					this.props.children || this.renderListItems()
 				)
 			);
 		}

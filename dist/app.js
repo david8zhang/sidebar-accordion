@@ -57,24 +57,32 @@ var App = (function (_Component) {
 				'div',
 				null,
 				_react2.default.createElement(
-					_sidebar2.default,
-					{ topics: topics,
-						selectTopic: function selectTopic(topic) {
-							console.log(topic);
-						},
-						title: 'Sample Sidebar' },
+					'div',
+					{ className: 'small-3 large-3 columns' },
 					_react2.default.createElement(
-						'h1',
-						null,
-						'Hello World!'
+						_sidebar2.default,
+						{ topics: topics,
+							selectTopic: function selectTopic(topic) {
+								console.log(topic);
+							},
+							title: 'Sample Sidebar' },
+						_react2.default.createElement(
+							'h1',
+							null,
+							'Hello World!'
+						)
 					)
 				),
 				_react2.default.createElement('br', null),
-				_react2.default.createElement(_sidebar2.default, { topics: topics,
-					selectTopic: function selectTopic(topic) {
-						console.log(topic);
-					},
-					title: 'Sample Sidebar' })
+				_react2.default.createElement(
+					'div',
+					{ className: 'small-3 large-3 columns' },
+					_react2.default.createElement(_sidebar2.default, { topics: topics,
+						selectTopic: function selectTopic(topic) {
+							console.log(topic);
+						},
+						title: 'Sample Sidebar' })
+				)
 			);
 		}
 	}]);

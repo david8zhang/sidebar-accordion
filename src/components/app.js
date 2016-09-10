@@ -29,15 +29,20 @@ class App extends Component {
 		}];
 		return (
 			<div>
-				<Sidebar topics={topics}
-						 selectTopic={(topic) => {console.log(topic)}}
-						 title='Sample Sidebar'>
-					<h1>Hello World!</h1>
-				</Sidebar>
+				<div className='small-3 large-3 columns'>
+					<Sidebar topics={topics}
+							 selectTopic={(topic) => {console.log(topic)}}
+							 title='Sample Sidebar'>
+						<h1>Hello World!</h1>
+					</Sidebar>
+				</div>
+
 				<br/>
-				<Sidebar topics={topics}
-						 selectTopic={(topic) => {console.log(topic)}}
-						 title='Sample Sidebar'/>
+				<div className='small-3 large-3 columns'>
+					<Sidebar topics={topics}
+							 selectTopic={(topic) => {console.log(topic)}}
+							 title='Sample Sidebar'/>
+				</div>
 			</div>
 		);
 	}
